@@ -163,7 +163,7 @@ int main(int argc, char * argv[]){
     uint8_t sender_ip[IP_ADDR_LEN];
     uint8_t target_ip[IP_ADDR_LEN];
     uint8_t buf[ARP_LEN];
-    uint8_t broadcast_mac[ETH_ADDR_LEN];
+    uint8_t broadcast_mac[ETH_ADDR_LEN] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
     char * dev = argv[1];
     char errbuf[PCAP_ERRBUF_SIZE];
 
