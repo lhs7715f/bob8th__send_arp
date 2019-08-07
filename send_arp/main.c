@@ -94,8 +94,8 @@ int arp_request(pcap_t *handle, uint8_t *src_mac, uint8_t *dst_mac, uint8_t *sen
     }
 
     for(int i=0; i<IP_ADDR_LEN; i++){
-        arp->sender_hard_addr[i] = sender_ip[i];
-        arp->target_hard_addr[i] = target_ip[i];
+        arp->sender_proto_addr[i] = sender_ip[i];
+        arp->target_proto_addr[i] = target_ip[i];
     }
 
     pcap_sendpacket(handle, buf, 42);
