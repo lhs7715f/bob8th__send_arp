@@ -50,7 +50,7 @@ int get_my_mac(const char *dev, uint8_t *mac){
         perror("ioctl ");
 
     for(int i=0; i<6; i++)
-        mac[i] = (u_int8_t *)ifr.ifr_hwaddr.sa_data[i];
+        mac[i] = (uint8_t *)ifr.ifr_hwaddr.sa_data[i];
     close(sock);
 
     return 0;
